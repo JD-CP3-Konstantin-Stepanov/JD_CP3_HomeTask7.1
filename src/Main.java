@@ -38,9 +38,7 @@ class Main {
 
         Map<Character, Integer> charFrequency = new HashMap<>();
         for (int i = 0; i < loremIpsum.length(); i++) {
-            if (loremIpsum.charAt(i) != ' ' && loremIpsum.charAt(i) != ','
-                    && loremIpsum.charAt(i) != '.' && loremIpsum.charAt(i) != '!'
-                    && loremIpsum.charAt(i) != '?' && loremIpsum.charAt(i) != '-') {
+            if (Character.isLetter(loremIpsum.charAt(i))) {
                 if (!charFrequency.containsKey(loremIpsum.charAt(i))) {
                     charFrequency.put(loremIpsum.charAt(i), 1);
                 } else {
